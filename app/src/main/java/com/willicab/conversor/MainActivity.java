@@ -66,12 +66,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 lyAcerca.setVisibility(View.VISIBLE);
+                etBolivar.setEnabled(false);
+                etBolivarFuerte.setEnabled(false);
+                etBolivarSoberano.setEnabled(false);
             }
         });
 
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                etBolivar.setEnabled(true);
+                etBolivarFuerte.setEnabled(true);
+                etBolivarSoberano.setEnabled(true);
                 lyAcerca.setVisibility(View.GONE);
             }
         });
