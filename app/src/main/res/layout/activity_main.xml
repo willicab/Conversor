@@ -85,7 +85,7 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:visibility="gone"
         android:padding="20dp"
         android:gravity="center"
@@ -94,81 +94,86 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:padding="20dp"
-            android:gravity="center"
-            android:background="@color/colorWhite"
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_margin="10dp"
-                android:src="@drawable/icon"
-                android:layout_width="64dp"
-                android:layout_height="64dp" />
-            <TextView
-                android:text="@string/app_name"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:text="Versión: 1.0.2"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
+            <LinearLayout
+                android:padding="20dp"
                 android:gravity="center"
-                android:text="Aplicación simple para la conversión de monedas a los diferentes conos monetarios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"
-                android:gravity="center"
-                android:text="© 2018, William Cabrera (A.K.A. @willicab)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:src="@drawable/icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp" />
+                <TextView
+                    android:text="@string/app_name"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Versión: 1.0.3"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center"
+                    android:text="Aplicación simple para la conversión de monedas a los diferentes conos monetarios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="Tester:\nAdrian J. Romero M. (A.K.A. @FaySor)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="© 2018, William Cabrera (A.K.A. @willicab)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/tvGithub"
-                android:autoLink="web"
-                android:text="@string/github_link"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Tester:\nAdrian J. Romero M. (A.K.A. @FaySor)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_margin="5dp"
-                android:id="@+id/tvBlog"
-                android:autoLink="web"
-                android:text="@string/blog_link"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvGithub"
+                    android:autoLink="web"
+                    android:text="@string/github_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/tvPaypal"
-                android:layout_marginBottom="20dp"
-                android:autoLink="web"
-                android:text="@string/paypal_link"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/tvBlog"
+                    android:autoLink="web"
+                    android:text="@string/blog_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/btnClose"
-                android:text="Aceptar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvPaypal"
+                    android:layout_marginBottom="20dp"
+                    android:autoLink="web"
+                    android:text="@string/paypal_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        </LinearLayout>
-    </LinearLayout>
+                <Button
+                    android:id="@+id/btnClose"
+                    android:text="Aceptar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 </RelativeLayout>
