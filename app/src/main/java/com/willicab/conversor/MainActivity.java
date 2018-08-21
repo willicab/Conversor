@@ -124,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("etBolivar: ", decimalFormatter.format(bolivar) + ", " +
                             decimalFormatter.format(bolivarFuerte) + ", " +
                             decimalFormatter.format(bolivarSoberano));
-                    etBolivarFuerte.setText(decimalFormatter.format(bolivarFuerte));
-                    etBolivarSoberano.setText(decimalFormatter.format(bolivarSoberano));
+                    etBolivarFuerte.setText(decimalFormatter.format(bolivarFuerte) + " BsF.");
+                    etBolivarSoberano.setText(decimalFormatter.format(bolivarSoberano) + " BsS.");
                 } catch (NumberFormatException e) {
                     Log.w("onTextChanged: ", e.getMessage());
                     etBolivar.setText("");
@@ -154,8 +154,8 @@ public class MainActivity extends AppCompatActivity {
                     bolivar = (bolivarFuerte * 1000);
                     bolivarSoberano = (bolivarFuerte / 100000);
                     Log.d("etBolivarFuerte: ", bolivar + ", " + bolivarFuerte + ", " + bolivarSoberano);
-                    etBolivar.setText(decimalFormatter.format(bolivar));
-                    etBolivarSoberano.setText(decimalFormatter.format(bolivarSoberano));
+                    etBolivarSoberano.setText(decimalFormatter.format(bolivarSoberano) + " BsS.");
+                    etBolivar.setText(decimalFormatter.format(bolivar) + " Bs.");
                 } catch (NumberFormatException e) {
                     Log.w("onTextChangedF: ", e.getMessage());
                     etBolivar.setText("");
@@ -184,8 +184,8 @@ public class MainActivity extends AppCompatActivity {
                     bolivarFuerte = (bolivarSoberano * 100000);
                     bolivar = (bolivarFuerte * 1000);
                     Log.d("etBolivarSoberano: ", bolivar + ", " + bolivarFuerte + ", " + bolivarSoberano);
-                    etBolivarFuerte.setText(decimalFormatter.format(bolivarFuerte));
-                    etBolivar.setText(decimalFormatter.format(bolivar));
+                    etBolivarFuerte.setText(decimalFormatter.format(bolivarFuerte) + " BsF.");
+                    etBolivar.setText(decimalFormatter.format(bolivar) + " Bs.");
                 } catch (NumberFormatException e) {
                     Log.w("onTextChangedS: ", e.getLocalizedMessage());
                     etBolivar.setText("");
