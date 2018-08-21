@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
         tvGithub = findViewById(R.id.tvGithub);
         tvBlog = findViewById(R.id.tvBlog);
         tvPaypal = findViewById(R.id.tvPaypal);
-        decimalFormatter = new DecimalFormat("##.############");
+        decimalFormatter = new DecimalFormat("#.##");
         decimalFormatter.setMinimumFractionDigits(2);
-        decimalFormatter.setMaximumFractionDigits(15);
+        decimalFormatter.setMaximumFractionDigits(2);
 
         btnAcerca.setOnClickListener(new View.OnClickListener() {
             @Override
