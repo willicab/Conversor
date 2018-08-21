@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Conversor</string>
+    <string name="main_name">El Conversor de willicab</string>
+    <string name="github_link">Código fuente en Github</string>
+    <string name="blog_link">Visita mi blog</string>
+    <string name="paypal_link">Apóyame con una donación</string>
+</resources>
