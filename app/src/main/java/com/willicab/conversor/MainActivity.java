@@ -131,8 +131,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("etBolivar: ", decimalFormatter.format(bolivar) + ", " +
                             decimalFormatter.format(bolivarFuerte) + ", " +
                             decimalFormatter.format(bolivarSoberano));
-                    etBolivarFuerte.setText(format.format(Double.parseDouble(decimalFormatter.format(bolivarFuerte))).replace("$", "") + " BsF.");
-                    etBolivarSoberano.setText(format.format(Double.parseDouble(decimalFormatter.format(bolivarSoberano))).replace("$", "") + " BsS.");
+                    etBolivarFuerte.setText(format.format(bolivarFuerte).replace("$", "") + " BsF.");
+                    etBolivarSoberano.setText(format.format(bolivarSoberano).replace("$", "") + " BsS.");
                 } catch (NumberFormatException e) {
                     Log.w("onTextChanged: ", e.getMessage());
                     etBolivar.setText("");
@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
                     bolivar = (bolivarFuerte * 1000);
                     bolivarSoberano = (bolivarFuerte / 100000);
                     Log.d("etBolivarFuerte: ", bolivar + ", " + bolivarFuerte + ", " + bolivarSoberano);
-                    etBolivarSoberano.setText(format.format(Double.parseDouble(decimalFormatter.format(bolivarSoberano))).replace("$", "") + " BsS.");
-                    etBolivar.setText(format.format(Double.parseDouble(decimalFormatter.format(bolivar))).replace("$", "") + " Bs.");
+                    etBolivarSoberano.setText(format.format(bolivarSoberano).replace("$", "") + " BsS.");
+                    etBolivar.setText(format.format(bolivar).replace("$", "") + " Bs.");
                 } catch (NumberFormatException e) {
                     Log.w("onTextChangedF: ", e.getMessage());
                     etBolivar.setText("");
@@ -191,13 +191,13 @@ public class MainActivity extends AppCompatActivity {
                     bolivarFuerte = (bolivarSoberano * 100000);
                     bolivar = (bolivarFuerte * 1000);
                     Log.d("etBolivarSoberano: ", bolivar + ", " + bolivarFuerte + ", " + bolivarSoberano);
-                    etBolivarFuerte.setText(format.format(Double.parseDouble(decimalFormatter.format(bolivarFuerte))).replace("$", "") + " BsF.");
-                    etBolivar.setText(format.format(Double.parseDouble(decimalFormatter.format(bolivar))).replace("$", "") + " Bs.");
+                    etBolivarFuerte.setText(format.format(bolivarFuerte).replace("$", "") + " BsF.");
+                    etBolivar.setText(format.format(bolivar).replace("$", "") + " Bs.");
                 } catch (NumberFormatException e) {
-                    Log.w("onTextChangedS: ", e.getLocalizedMessage());
-                    etBolivar.setText("");
-                    etBolivarFuerte.setText("");
-                    etBolivarSoberano.setText("");
+                    Log.w("onTextChangedS: ", e.getLocalizedMessage()+"\n..\n"+e.getStackTrace().toString());
+                    //etBolivar.setText("");
+                    //etBolivarFuerte.setText("");
+                    //etBolivarSoberano.setText("");
                 }
                 editando = false;
             }
